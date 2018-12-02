@@ -6,8 +6,11 @@ project(tp2 VERSION 1.0 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-add_executable(ref
-  ref.cpp vector.cpp
+# add_executable(ref_mat ref_mat.cpp vector.cpp matrix.cpp )
+
+add_executable(ref_vect
+  ref_vect.cpp
+  vector.cpp
   matrix.cpp
   )
 

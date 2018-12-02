@@ -73,9 +73,28 @@ ml::vector ml::matrix::operator*(const ml::vector& v) const
   return temp;
 };
 
-/*
-//Opérateur d’affichage :
-std::ostream& ml::matrix::operator<<(std::ostream&, const ml::matrix::xmatrix&)
 
+//Opérateur d’affichage :
+
+//ICI CA VA PLUS, IL Y A COMME UN PROBLEME.
+
+std::ostream& ml::operator<<(std::ostream& nout, const ml::matrix& mat)
+{
+  /*std::size_t tx = mat.size_x;
+  std::size_t ty = mat.size_y;
+  nout << "ton vecteur est : "<<tx<<" x "<<ty<<std::endl;*/
+  nout << "[ ";
+  for (int i = 0; i < mat.colonne; ++i)
+  {
+  	nout << std::endl;
+  	for (int j = 0; j < mat.ligne; ++j)
+  	{
+  		nout << mat(i, j)<< " ";
+  	}
+  }
+  nout<<"]"<<std::endl<<std::endl;
+}
+
+/*
 //Accesseur à la transposée :
 ml::matrix::matrix ml::matrix::transpose() const*/

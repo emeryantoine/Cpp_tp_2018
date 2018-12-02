@@ -27,13 +27,12 @@ namespace ml
       matrix& operator=(double);
 
       vector operator*(const vector& v) const;
-/*
-      std::ostream& operator<<(std::ostream&, const matrix&);
-
-      matrix transpose() const;*/
 		
     private:
   };
+
+  std::ostream& operator<<(std::ostream&, const matrix&);
+  //matrix transpose() const;
 
 }
 

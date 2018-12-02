@@ -1,5 +1,6 @@
 #include <iostream>
 #include "vector.hpp"
+#include "matrix.hpp"
 
 int main()
 {
@@ -24,13 +25,32 @@ int main()
   u += v;
   std::cout << "u = " << u << std::endl;
   
-  std::cout << "test de ml::version1::matrix" << std::endl;
+  std::cout << "test de ml::version::matrix" << std::endl;
   
-  // TODO
-  
-  std::cout << "test de ml::version2::matrix" << std::endl;
-  
-  // TODO
+  ml::matrix A(3, 3);
+  A = 1.0;
+  std::cout << "matrice A : "<<std::endl<<A<<std::endl;
+
+  ml::matrix B(3, 3);
+  for (int i = 0; i < 3; ++i)
+  {
+    for (int j = 0; j < 3; ++j)
+    {
+      B(i, j) = i+j;
+    }
+  }
+
+  ml::matrix C(3, 3);
+
+  ml::vector X(3);
+  X = 2;
+
+  //C = A * X;
+
+  std::cout<<"element centrale de la matrice B : "<<B(1, 1)<<std::endl;
+
+  std::cout << "matrice B : "<<std::endl<<B<<std::endl;
+  std::cout << "matrice C : "<<std::endl<<C<<std::endl;
   
   return 0;
 }

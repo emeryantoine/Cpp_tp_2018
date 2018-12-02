@@ -13,8 +13,6 @@ int main()
   
   std::cout << "test de performances de ml::version1::matrix" << std::endl;
   
-  // TODO
-  
   std::cout << "test de performances de ml::version2::matrix" << std::endl;
   
   // TODO
